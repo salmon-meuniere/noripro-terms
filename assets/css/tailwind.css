@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.markdown-body {
+	--color-canvas-default: transparent!important;
+    --color-fg-default: #0f3045;
+	@apply font-content-sans;
+}
+
+.markdown-body h1 > a[href^='#'],
+.markdown-body h2 > a[href^='#'],
+.markdown-body h3 > a[href^='#'],
+.markdown-body h4 > a[href^='#'],
+.markdown-body h5 > a[href^='#'],
+.markdown-body h6 > a[href^='#'] {
+	color: var(--color-fg-default);
+	cursor: pointer;
+}
+
+.markdown-body h1 > a[href^='#']:hover,
+.markdown-body h2 > a[href^='#']:hover,
+.markdown-body h3 > a[href^='#']:hover,
+.markdown-body h4 > a[href^='#']:hover,
+.markdown-body h5 > a[href^='#']:hover,
+.markdown-body h6 > a[href^='#']:hover {
+	text-decoration: none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+    list-style: revert;
+}
