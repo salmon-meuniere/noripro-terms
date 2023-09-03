@@ -48,6 +48,11 @@ export default defineNuxtConfig({
 			autoprefixer: {},
 		},
 	},
+  nitro: {
+    prerender: {
+      failOnError: false,
+    }
+  },
   experimental: {
     inlineSSRStyles: false,
     payloadExtraction: true,
